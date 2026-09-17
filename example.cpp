@@ -17,6 +17,7 @@ int main() {
         cfg.StorageSpecifier = OutputCfg::StorageSpecifier_static;
         cfg.ExportTypeFlags = TypeFlags::u64;
     }
+    // ReSharper disable once CppExpressionWithoutSideEffects
     output("bin.hpp.测试.cpp");
 
     return 0;

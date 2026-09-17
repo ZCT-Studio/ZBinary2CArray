@@ -33,7 +33,7 @@
 #define ZBTCA_OUTPUT_ASSERT(cond, msg) \
         do { \
             if (!(cond)) { \
-               return ::Bin2::Res(msg, false); \
+               return ::ZBTCA_Response(msg, false); \
             } \
         } while (0)
 #endif
