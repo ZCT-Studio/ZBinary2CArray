@@ -230,7 +230,7 @@ jobs:
                     sudo apt-get install -y \
                       gcc-arm-linux-gnueabihf \
                       g++-arm-linux-gnueabihf
-            
+
             -   name: Configure
                 run: |
                     cmake \
@@ -239,8 +239,8 @@ jobs:
                       -DCMAKE_BUILD_TYPE=Release \
                       -DCMAKE_C_COMPILER=arm-linux-gnueabihf-gcc \
                       -DCMAKE_CXX_COMPILER=arm-linux-gnueabihf-g++ \
-                      -DCMAKE_C_FLAGS="-march=armv7-a" \
-                      -DCMAKE_CXX_FLAGS="-march=armv7-a" \
+                      -DCMAKE_C_FLAGS="-march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard" \
+                      -DCMAKE_CXX_FLAGS="-march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=hard" \
                       -DCMAKE_CXX_STANDARD=20
             
             -   name: Build
