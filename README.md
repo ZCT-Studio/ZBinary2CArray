@@ -19,7 +19,7 @@ generating ready-to-include source files.
 ## Requirements
 
 - A C++20-compatible compiler.
-- CMake 3.31.6 or newer to build the command-line program.
+- CMake 3.28.3 or newer to build the command-line program.
 
 ## Build
 
