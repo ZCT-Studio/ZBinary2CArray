@@ -12,6 +12,7 @@
 #include "bin.hpp"
 #include "details.hpp"
 #include <string>
+#include <sstream>
 #include <cstdlib>
 #include <format>
 

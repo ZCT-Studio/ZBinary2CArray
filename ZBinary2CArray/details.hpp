@@ -10,6 +10,7 @@
 #ifdef _WIN32
 #include <windows.h>
 #endif
+#include <ostream>
 #include <cstdlib>
 #include <array>
 #include <string>
