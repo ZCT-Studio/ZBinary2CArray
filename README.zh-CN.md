@@ -1,6 +1,6 @@
 # ZBinary2CArray
 
-**简体中文** · [繁體中文](README.zh-TW.md) · [English](README.md)
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 `ZBinary2CArray` 用于将二进制文件转换为 C/C++ 数组。项目提供仅头文件的
 C++20 库，以及可生成可直接包含源码文件的命令行程序 `zbtca-cli`。

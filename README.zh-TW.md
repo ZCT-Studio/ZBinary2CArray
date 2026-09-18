@@ -1,6 +1,6 @@
 # ZBinary2CArray
 
-[简体中文](README.zh-CN.md) · **繁體中文** · [English](README.md)
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 `ZBinary2CArray` 可將二進位檔案轉換為 C/C++ 陣列。專案提供僅標頭檔的
 C++20 函式庫，以及能產生可直接包含之原始碼檔案的命令列程式 `zbtca-cli`。

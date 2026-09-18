@@ -1,6 +1,6 @@
 # ZBinary2CArray
 
-[简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · **English**
+[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
 
 `ZBinary2CArray` converts a binary file into a C/C++ array. It provides a
 header-only C++20 library and a command-line program (`zbtca-cli`) for
