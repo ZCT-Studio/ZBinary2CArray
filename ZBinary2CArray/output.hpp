@@ -24,7 +24,7 @@ public:
     explicit ZBTCA_Output(const ZBTCA_Bin& bin) : m_bin(bin) {};
 
     ZBTCA_Response operator()(const ZBTCA_Details::fs::path& path) const {
-        static constexpr std::string TAB(2, ' ');
+        static const std::string TAB(2, ' '); // MSVC can not use constexpr!
 
         using namespace ZBTCA_Types;
         using namespace ZBTCA_Details;
