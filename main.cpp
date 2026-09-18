@@ -62,8 +62,7 @@ namespace {
     }
 
     fs::path DeriveOutput(const fs::path& input, const bool header_only) {
-        fs::path out = input;
-        out.replace_extension(header_only ? ".hpp" : ".cpp");
+        fs::path out = input.string() + (header_only ? ".hpp" : ".cpp");
         return out;
     }
 
