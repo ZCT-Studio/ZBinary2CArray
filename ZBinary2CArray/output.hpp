@@ -179,7 +179,7 @@ public:
             ZBTCA_OUTPUT_ASSERT(false, std::string("Exception while writing data: ") + e.what());
         }
 
-        ofs << "}; // " << filename << "_end [" << elements << " elements]" << (m_cfg.HeaderOnly ? inc_guard_end : "");
+        ofs << "\n}; // " << filename << "_end [" << elements << " elements]" << (m_cfg.HeaderOnly ? inc_guard_end : "");
 
         ofs.close();
 

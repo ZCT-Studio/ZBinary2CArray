@@ -437,8 +437,22 @@ jobs:
                     echo "Release files:"
                     ls -lh release-files
             
+            -   name: Determine prerelease
+                id: check
+                shell: bash
+                run: |
+                    TAG="${GITHUB_REF_NAME}"
+                    if [[ "$TAG" == *-* ]]; then
+                        echo "prerelease=true" >> "$GITHUB_OUTPUT"
+                        echo "Tag '$TAG' contains '-', marking as prerelease."
+                    else
+                        echo "prerelease=false" >> "$GITHUB_OUTPUT"
+                        echo "Tag '$TAG' has no '-', marking as stable release."
+                    fi
+            
             -   name: Create GitHub Release
                 uses: softprops/action-gh-release@v2
                 with:
                     files: release-files/*
                     generate_release_notes: true
+                    prerelease: ${{ steps.check.outputs.prerelease }}
