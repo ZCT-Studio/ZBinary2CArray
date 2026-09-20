@@ -5,6 +5,11 @@
 `ZBinary2CArray` 可將二進位檔案轉換為 C/C++ 陣列。專案提供僅標頭檔的
 C++20 函式庫，以及能產生可直接包含之原始碼檔案的命令列程式 `zbtca-cli`。
 
+## 連結
+
+- [GitHub](https://github.com/ZCT-Studio/ZBinary2CArray)
+- [Telegram](https://t.me/ZCT_Studio)
+
 ## 功能
 
 - 支援匯出為 `unsigned char`、`unsigned short`、`unsigned int` 或

@@ -6,6 +6,11 @@
 header-only C++20 library and a command-line program (`zbtca-cli`) for
 generating ready-to-include source files.
 
+## Links
+
+- [GitHub](https://github.com/ZCT-Studio/ZBinary2CArray)
+- [Telegram](https://t.me/ZCT_Studio)
+
 ## Features
 
 - Export binary data as `unsigned char`, `unsigned short`, `unsigned int`, or
