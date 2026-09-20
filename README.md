@@ -12,18 +12,44 @@ generating ready-to-include source files.
 
 ## Features
 
-- Export binary data as `unsigned char`, `unsigned short`, `unsigned int`, or
-  `unsigned long long` arrays.
-- Generate either a self-contained header or a source file with an `extern`
-  declaration header.
-- Configure storage and const specifiers, include guards, line wrapping, and
-  generated-file annotations.
+- Export binary data as `unsigned char` (u8), `unsigned short` (u16),
+  `unsigned int` (u32), or `unsigned long long` (u64) arrays.
+- Generate either a self-contained header (`.hpp`) or a source file (`.cpp`)
+  with a companion `extern` declaration header.
+- Configurable storage specifier (`none`, `static`, `inline`) and const
+  qualifier (`none`, `const`, `constexpr`).
+- Optional include guard and tidy formatted hexadecimal output.
+- Annotation support: tool name, runner name, source file info, size, and
+  timestamp — all togglable.
+- Configurable numbers per line (`0` = auto by type).
 - Automatically creates missing output directories.
+- Single executable, no runtime dependencies; static libstdc++/libgcc on
+  MinGW and static CRT on MSVC.
 
 ## Requirements
 
-- A C++20-compatible compiler.
+- A C++20-compatible compiler (GCC 13+, Clang 17+, MSVC 2022 17.8+).
 - CMake 3.28.3 or newer to build the command-line program.
+
+## Project Structure
+
+```
+ZBinary2CArray/
+├── CMakeLists.txt                    # Build configuration (CLI target)
+├── main.cpp                          # CLI entry point (zbtca-cli)
+├── ZBinary2CArray/                   # Header-only C++20 library
+│   ├── zbtca.h                       # Public umbrella header
+│   ├── types.hpp                     # OutputCfg, TypeFlags, AnnotationCfg
+│   ├── bin.hpp                       # Binary file reader (ZBTCA_Bin)
+│   ├── output.hpp                    # C/C++ array writer (ZBTCA_Output)
+│   ├── response.hpp                  # Conversion response (ZBTCA_Response)
+│   ├── details.hpp                   # Internal implementation details
+│   └── LICENSE.TXT
+├── .github/workflows/cmake-multi-platform.yml   # CI/CD pipeline
+├── README.md
+├── README.zh-CN.md
+└── README.zh-TW.md
+```
 
 ## Build
 
@@ -72,7 +98,7 @@ zbtca-cli assets/logo.bin --source --output generated/logo.cpp --type u32
 | `--no-anno-tool`, `--no-anno-runner`, `--no-anno-file`, `--no-anno-size`, `--no-anno-time` | Disable the corresponding generated-file annotation. |
 | `--tool-name <name>` | Override the tool name in annotations. |
 | `--runner-name <name>` | Override the runner name in annotations. |
-| `-h`, `--help` | Print command help. |
+| `-h`, `--help` | Print command help (includes project links). |
 
 ## Library usage
 
@@ -99,6 +125,27 @@ int main() {
 
 The generated identifier is derived from the input filename; characters that
 are invalid in C/C++ identifiers are replaced with underscores.
+
+## CI/CD
+
+The GitHub Actions workflow (`.github/workflows/cmake-multi-platform.yml`)
+automatically builds and tests the CLI on every push to `master` and every
+pull request, producing release artifacts for **8 targets**:
+
+| Runner | Architecture | Artifact |
+| --- | --- | --- |
+| `windows-latest` | x64 | `.zip` |
+| `windows-latest` | x86 | `.zip` |
+| `ubuntu-latest` | x64 | `.tar.gz` |
+| `ubuntu-latest` | x86 (multilib) | `.tar.gz` |
+| `ubuntu-latest` | ARM32 (cross) | `.tar.gz` |
+| `ubuntu-24.04-arm` | ARM64 (native) | `.tar.gz` |
+| `macos-15-intel` | x64 | `.tar.gz` |
+| `macos-14` | ARM64 (Apple Silicon) | `.tar.gz` |
+
+When a tag starting with `v` (e.g., `v1.0.0`, `v1.0.1_p1`) is pushed, all
+eight platforms must build successfully before a GitHub Release is created
+and all artifacts are attached. Tags containing `-` are marked as prerelease.
 
 ## License
 
