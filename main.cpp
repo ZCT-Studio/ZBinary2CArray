@@ -58,7 +58,11 @@ namespace {
             "      --no-anno-time            Disable time annotation\n"
             "      --tool-name <name>        Custom tool name\n"
             "      --runner-name <name>      Custom runner name\n"
-            "  -h, --help                    Show this help\n";
+            "  -h, --help                    Show this help\n"
+            "\n"
+            "Links:\n"
+            "  GitHub:    https://github.com/ZCT-Studio/ZBinary2CArray\n"
+            "  Telegram:  t.me/ZCT_Studio\n";
     }
 
     fs::path DeriveOutput(const fs::path& input, const bool header_only) {
