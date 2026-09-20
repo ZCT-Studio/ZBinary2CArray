@@ -7,7 +7,6 @@ C++20 库，以及可生成可直接包含源码文件的命令行程序 `zbtca-
 
 ## 链接
 
-- [GitHub](https://github.com/ZCT-Studio/ZBinary2CArray)
 - [Telegram](https://t.me/ZCT_Studio)
 
 ## 特性

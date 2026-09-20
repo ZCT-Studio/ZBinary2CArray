@@ -7,7 +7,6 @@ C++20 函式庫，以及能產生可直接包含之原始碼檔案的命令列�
 
 ## 連結
 
-- [GitHub](https://github.com/ZCT-Studio/ZBinary2CArray)
 - [Telegram](https://t.me/ZCT_Studio)
 
 ## 功能
