@@ -5,10 +5,6 @@
 `ZBinary2CArray` 用于将二进制文件转换为 C/C++ 数组。项目提供仅头文件的
 C++20 库，以及可生成可直接包含源码文件的命令行程序 `zbtca-cli`。
 
-## 链接
-
-- [Telegram](https://t.me/ZCT_Studio)
-
 ## 特性
 
 - 支持导出为 `unsigned char`（u8）、`unsigned short`（u16）、
@@ -143,6 +139,10 @@ GitHub Actions 工作流（`.github/workflows/cmake-multi-platform.yml`）
 当推送以 `v` 开头的标签（如 `v1.0.0`、`v1.0.1_p1`）时，
 八个平台全部构建成功后，会自动创建 GitHub Release 并附加所有工件。
 包含 `-` 的标签会被标记为预发布版本。
+
+## Related Projects & Community
+
+- `https://t.me/ZCT_Studio` — Follow for project updates and announcements.
 
 ## 许可证
 

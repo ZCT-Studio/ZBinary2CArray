@@ -5,10 +5,6 @@
 `ZBinary2CArray` 可將二進位檔案轉換為 C/C++ 陣列。專案提供僅標頭檔的
 C++20 函式庫，以及能產生可直接包含之原始碼檔案的命令列程式 `zbtca-cli`。
 
-## 連結
-
-- [Telegram](https://t.me/ZCT_Studio)
-
 ## 功能
 
 - 支援匯出為 `unsigned char`（u8）、`unsigned short`（u16）、
@@ -143,6 +139,10 @@ GitHub Actions 工作流（`.github/workflows/cmake-multi-platform.yml`）
 當推送以 `v` 開頭的標籤（如 `v1.0.0`、`v1.0.1_p1`）時，
 八個平台全部建置成功後，會自動建立 GitHub Release 並附加所有工件。
 包含 `-` 的標籤會被標記為預發行版本。
+
+## Related Projects & Community
+
+- `https://t.me/ZCT_Studio` — Follow for project updates and announcements.
 
 ## 授權條款
 

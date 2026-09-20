@@ -6,10 +6,6 @@
 header-only C++20 library and a command-line program (`zbtca-cli`) for
 generating ready-to-include source files.
 
-## Links
-
-- [Telegram](https://t.me/ZCT_Studio)
-
 ## Features
 
 - Export binary data as `unsigned char` (u8), `unsigned short` (u16),
@@ -146,6 +142,10 @@ pull request, producing release artifacts for **8 targets**:
 When a tag starting with `v` (e.g., `v1.0.0`, `v1.0.1_p1`) is pushed, all
 eight platforms must build successfully before a GitHub Release is created
 and all artifacts are attached. Tags containing `-` are marked as prerelease.
+
+## Related Projects & Community
+
+- `https://t.me/ZCT_Studio` — Follow for project updates and announcements.
 
 ## License
 
